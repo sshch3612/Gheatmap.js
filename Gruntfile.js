@@ -1,5 +1,5 @@
 /*global module:false*/
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   var packagejson = grunt.file.readJSON('package.json');
   // Project configuration.
@@ -10,12 +10,12 @@ module.exports = function(grunt) {
     // Task configuration.
     concat: {
       options: {
-        banner: '<%= banner %>'+';(function (name, context, factory) {\n\n  // Supports UMD. AMD, CommonJS/Node.js and browser context\n  if (typeof module !== "undefined" && module.exports) {\n    module.exports = factory();\n  } else if (typeof define === "function" && define.amd) {\n    define(factory);\n  } else {\n    context[name] = factory();\n  }\n\n})("h337", this, function () {\n',
+        banner: '<%= banner %>' + ';(function (name, context, factory) {\n\n  // Supports UMD. AMD, CommonJS/Node.js and browser context\n  if (typeof module !== "undefined" && module.exports) {\n    module.exports = factory();\n  } else if (typeof define === "function" && define.amd) {\n    define(factory);\n  } else {\n    context[name] = factory();\n  }\n\n})("h337", this, function () {\n',
         footer: '\n\n});'
       },
       dist: {
         src: packagejson.buildFiles,
-        dest: 'build/heatmap.js'
+        dest: 'build/Gheatmap.js'
       }
     },
     uglify: {
@@ -26,8 +26,8 @@ module.exports = function(grunt) {
         beautify: false
       },
       dist: {
-        src: 'build/heatmap.js',
-        dest: 'build/heatmap.min.js'
+        src: 'build/Gheatmap.js',
+        dest: 'build/Gheatmap.min.js'
       }
     },
     jshint: {
